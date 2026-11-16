@@ -1,0 +1,65 @@
+#api call for creating customer foodlogs
+
+###
+POST http://127.0.0.1:8000/customers/foodlogs/
+Content-Type: application/json
+
+{
+    "username":"user1",
+    "email":"user1@gmail.com",
+    "password":"user@123"
+}
+
+
+#api call for listing foodlog
+
+###
+GET http://127.0.0.1:8000/foodfit/foodlogs/
+Accept: application/json
+Authorization: Basic user1:user@123
+
+#api call create foodlog
+
+###
+POST http://127.0.0.1:8000/foodfit/foodlogs/
+Content-Type: application/json
+Authorization: Basic user1:user@123
+
+{
+    "title":"idli",
+    "calorie":180,
+    "meal_type":"BREAKFAST",
+    "serving_size":"3 piece",
+    "created_at":"2026-10-15",
+    "owner":"achu"
+}
+
+#api call for retrieve foodlog
+
+###
+GET http://127.0.0.1:8000/foodfit/foodlogs/1/
+Accept: application/json
+Authorization: Basic user1:user@123
+
+#api call for update foodlog
+
+###
+PUT http://127.0.0.1:8000/foodfit/foodlogs/5/
+Content-Type: application/json
+Authorization: Basic user1:user@123
+
+{
+    "title": "idli",
+    "calorie": 100,
+    "meal_type": "BREAKFAST",
+    "serving_size": "2 piece",
+    "created_at": "2026-10-18",
+    "owner": "sanjana"
+}
+
+#api call for delete foodlog
+
+###
+DELETE http://127.0.0.1:8000/foodfit/foodlogs/5/
+Accept: application/json
+Authorization: Basic user1:user@123
